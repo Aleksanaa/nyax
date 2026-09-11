@@ -43,7 +43,7 @@ func newParser(lr *lexResult) *Parser {
 }
 
 // Path is the name of the source this was parsed from: a file path, or
-// "«string»" for an expression given as text. The evaluator uses it to
+// StringPath for an expression given as text. The evaluator uses it to
 // resolve the relative paths a file contains against the file's directory.
 func (p *Parser) Path() string { return p.file.Name() }
 

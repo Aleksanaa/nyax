@@ -218,7 +218,7 @@ func bUnsafeGetAttrPos(w *worker, args ...*Expression) NixValue {
 			break
 		}
 	}
-	if pos == nil {
+	if pos == nil || pos.Filename == p.StringPath {
 		return Null
 	}
 	s := NewSet(3)

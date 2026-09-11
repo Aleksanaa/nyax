@@ -27,9 +27,15 @@ type lexResult struct {
 
 var fileset = token.NewFileSet()
 
+// StringPath is the pseudo-path given to an expression that was parsed from
+// text rather than a file. Positions still carry it, but Nix treats such
+// positions as having no source at all (builtins.unsafeGetAttrPos returns
+// null for them), so callers test against it.
+const StringPath = "«string»"
+
 func newLexResult(path string, size int) *lexResult {
 	if path == "" {
-		path = "«string»"
+		path = StringPath
 	}
 	return &lexResult{file: fileset.AddFile(path, -1, size)}
 }

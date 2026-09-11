@@ -1,6 +1,8 @@
 package eval
 
 import (
+	"path/filepath"
+	"strings"
 	"testing"
 )
 
@@ -142,5 +144,20 @@ func TestMapAttrsLaziness(t *testing.T) {
 	// that does not return a function for its second argument fails then.
 	if _, err := EvalString(`(builtins.mapAttrs (name: 1) { a = 1; }).a`); err == nil {
 		t.Error("forcing .a: expected an error, got nil")
+	}
+}
+
+func TestUnsafeGetAttrPosSource(t *testing.T) {
+	// Nix only reports a position when it comes from a file. An expression
+	// parsed from text has positions, but they are treated as sourceless.
+	if got, err := evalPrint(t, `builtins.unsafeGetAttrPos "a" { a = 1; }`); err != nil || got != "null" {
+		t.Fatalf("string source: got %q, err %v; want null", got, err)
+	}
+
+	dir := t.TempDir()
+	path := filepath.Join(dir, "pos.nix")
+	write(t, path, `builtins.unsafeGetAttrPos "a" { a = 1; }`)
+	if got := evalFile(t, path); !strings.Contains(got, path) {
+		t.Fatalf("file source: got %q, want it to mention %q", got, path)
 	}
 }
