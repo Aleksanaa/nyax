@@ -4,7 +4,7 @@ import (
 	"path"
 	"strconv"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // printInt renders an integer the way Nix does. It is worth going through

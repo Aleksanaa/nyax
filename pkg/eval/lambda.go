@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"unsafe"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // NixLambda is anything that can be applied to an argument. Apply is lazy: it

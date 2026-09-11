@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"testing"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // The example workloads double as benchmarks, so that a change can be measured

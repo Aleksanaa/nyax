@@ -1,7 +1,7 @@
 package eval
 
 import (
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // operand evaluates the i-th child of the current node.

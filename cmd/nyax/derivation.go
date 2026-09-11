@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: LGPL-2.1-or-later
 //
-// This file is part of go-nix. go-nix is based on Orivej Desh's go-nix
+// This file is part of Nyax. Nyax is based on Orivej Desh's go-nix
 // (https://github.com/orivej/go-nix), which is released under the UNLICENSE,
 // and its behaviour follows the Nix implementation
 // (https://github.com/NixOS/nix); all Nix contributors are gratefully
@@ -14,9 +14,9 @@ import (
 	"strings"
 
 	"github.com/alecthomas/kingpin"
-	"github.com/aleksanaa/go-nix/pkg/eval"
-	"github.com/aleksanaa/go-nix/pkg/nixjson"
-	"github.com/aleksanaa/go-nix/pkg/parser"
+	"github.com/aleksanaa/nyax/pkg/eval"
+	"github.com/aleksanaa/nyax/pkg/nixjson"
+	"github.com/aleksanaa/nyax/pkg/parser"
 )
 
 var (

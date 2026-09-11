@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/aleksanaa/go-nix/pkg/nixhash"
-	"github.com/aleksanaa/go-nix/pkg/nixjson"
+	"github.com/aleksanaa/nyax/pkg/nixhash"
+	"github.com/aleksanaa/nyax/pkg/nixjson"
 )
 
 // Derivations.

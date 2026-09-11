@@ -4,8 +4,8 @@ import (
 	"slices"
 	"strconv"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
-	"github.com/aleksanaa/go-nix/pkg/source"
+	p "github.com/aleksanaa/nyax/pkg/parser"
+	"github.com/aleksanaa/nyax/pkg/source"
 )
 
 // Static facts about a syntax node — the value of a literal, the interned name

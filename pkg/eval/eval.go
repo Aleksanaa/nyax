@@ -12,7 +12,7 @@ import (
 	"strings"
 	"unsafe"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // Eval evaluates a parsed expression to a value.

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // ErrorKind classifies an evaluation failure. It decides both the wording of

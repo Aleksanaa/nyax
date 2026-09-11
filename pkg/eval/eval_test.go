@@ -689,7 +689,7 @@ func TestDerivationEquality(t *testing.T) {
 // rather than making a thunk of its own, so `[ f ] == [ f ]` compares one
 // thunk with itself. Nix does the same and by the same means — ExprList::eval
 // borrows through maybeThunk, and eqValues opens with a pointer comparison —
-// so this is not a liberty gon takes but a shape it has to match.
+// so this is not a liberty Nyax takes but a shape it has to match.
 func TestSharedThunkEquality(t *testing.T) {
 	for _, test := range [][2]string{
 		// Both elements borrow the same binding, so they are one thunk.

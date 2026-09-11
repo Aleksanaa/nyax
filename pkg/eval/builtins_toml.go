@@ -22,7 +22,7 @@ func bFromTOML(w *worker, args ...*Expression) NixValue {
 
 // tomlToNix converts a value decoded by the TOML library, mirroring the switch
 // in prim_fromTOML. Dates and times are refused because Nix only accepts them
-// behind the experimental ParseTomlTimestamps feature, which gon does not
+// behind the experimental ParseTomlTimestamps feature, which Nyax does not
 // implement.
 func tomlToNix(w *worker, x any) NixValue {
 	switch t := x.(type) {

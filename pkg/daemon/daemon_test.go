@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/aleksanaa/go-nix/pkg/nixhash"
+	"github.com/aleksanaa/nyax/pkg/nixhash"
 )
 
 func dialTest(t *testing.T) *Conn {
@@ -65,7 +65,7 @@ func TestAddToStore(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	// The daemon should assign the same path gon hashes in memory.
+	// The daemon should assign the same path Nyax hashes in memory.
 	want, err := nixhash.StorePathFiltered(p, "hello.txt", nil)
 	if err != nil {
 		t.Fatal(err)

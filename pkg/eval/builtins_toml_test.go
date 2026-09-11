@@ -91,7 +91,7 @@ y"""
 }
 
 // TestFromTOMLErrors checks the inputs Nix rejects. Dates and times are only
-// accepted behind an experimental feature gon does not implement, and a null
+// accepted behind an experimental feature Nyax does not implement, and a null
 // byte cannot be represented as a Nix string in either a value or a key.
 func TestFromTOMLErrors(t *testing.T) {
 	for _, toml := range []string{

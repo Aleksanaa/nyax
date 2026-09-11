@@ -2,7 +2,7 @@
 # measures function calls and integer arithmetic rather than list building.
 #
 #   nix-instantiate --eval examples/hanoi-calls.nix
-#   gon eval -f examples/hanoi-calls.nix
+#   nyax eval -f examples/hanoi-calls.nix
 #
 # `n` is on its own line so that examples/bench.sh can rewrite it.
 let

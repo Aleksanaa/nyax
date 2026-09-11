@@ -4,9 +4,9 @@ import (
 	"path"
 	"sync"
 
-	"github.com/aleksanaa/go-nix/pkg/nixhash"
-	"github.com/aleksanaa/go-nix/pkg/parser"
-	"github.com/aleksanaa/go-nix/pkg/source"
+	"github.com/aleksanaa/nyax/pkg/nixhash"
+	"github.com/aleksanaa/nyax/pkg/parser"
+	"github.com/aleksanaa/nyax/pkg/source"
 )
 
 // import and the source-access builtins: loading and evaluating files, and

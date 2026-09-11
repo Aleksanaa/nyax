@@ -2,7 +2,7 @@
 #
 # This is the shape most Nix code has, and the one where the two evaluators
 # differ most in representation — Nix keeps a set as a sorted array of
-# name/value pairs, gon keeps it as a Go map.
+# name/value pairs, Nyax keeps it as a Go map.
 #
 # `n` is on its own line so that examples/bench.sh can rewrite it.
 let

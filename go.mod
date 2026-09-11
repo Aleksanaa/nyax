@@ -1,4 +1,4 @@
-module github.com/aleksanaa/go-nix
+module github.com/aleksanaa/nyax
 
 go 1.26.7
 

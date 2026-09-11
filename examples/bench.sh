@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Compare gon against nix on the example workloads.
+# Compare Nyax against nix on the example workloads.
 #
 #   examples/bench.sh                          # every workload, at its own size
 #   examples/bench.sh hanoi.nix 10 18          # one workload, swept over n
-#   GON=./result/bin/gon examples/bench.sh     # time a binary you already have
+#   NYAX=./result/bin/nyax examples/bench.sh   # time a binary you already have
 #   REPEATS=5 examples/bench.sh                # more runs per measurement
 #
 # Each workload is a self-contained Nix expression that both evaluators accept,
@@ -25,10 +25,10 @@ fi
 work=$(mktemp -d)
 trap 'rm -rf "$work"' EXIT
 
-gon=${GON:-$work/gon}
-if [ ! -x "$gon" ]; then
-  echo "building gon..." >&2
-  go build -C "$root" -o "$gon" ./cmd/gon
+nyax=${NYAX:-$work/nyax}
+if [ ! -x "$nyax" ]; then
+  echo "building nyax..." >&2
+  go build -C "$root" -o "$nyax" ./cmd/nyax
 fi
 
 # best runs a command `repeats` times and echoes the shortest wall time in ms.
@@ -45,10 +45,10 @@ best() {
 }
 
 # ratio divides the two evaluation times with process startup taken out of
-# both, since nix spends more than ten times as long as gon getting started and
+# both, since nix spends more than ten times as long as Nyax getting started and
 # would otherwise look better than it is on the shorter workloads.
 ratio() {
-  awk -v g="$1" -v x="$2" -v bg="$basegon" -v bx="$basenix" 'BEGIN {
+  awk -v g="$1" -v x="$2" -v bg="$basenyax" -v bx="$basenix" 'BEGIN {
     g -= bg; x -= bx
     if (g < 1) g = 1
     if (x < 1) x = 1
@@ -59,24 +59,24 @@ ratio() {
 # compare times one file and prints a row. $1 is the file, $2 the label.
 compare() {
   local src=$1 label=$2 a b g x
-  a=$("$gon" eval -f "$src")
+  a=$("$nyax" eval -f "$src")
   b=$("$nix" --eval "$src")
   if [ "$a" != "$b" ]; then
-    printf '%-16s  MISMATCH\n  gon: %s\n  nix: %s\n' "$label" "$a" "$b"
+    printf '%-16s  MISMATCH\n  nyax: %s\n  nix: %s\n' "$label" "$a" "$b"
     return 1
   fi
-  g=$(best "$gon" eval -f "$src")
+  g=$(best "$nyax" eval -f "$src")
   x=$(best "$nix" --eval "$src")
   printf '%-16s  %8d  %8d  %7sx\n' "$label" "$g" "$x" "$(ratio "$g" "$x")"
 }
 
 header() {
-  printf '\n%-16s  %8s  %8s  %8s\n' "$1" gon nix slower
+  printf '\n%-16s  %8s  %8s  %8s\n' "$1" nyax nix slower
   printf '%-16s  %8s  %8s  %8s\n' ---------------- -------- -------- --------
 }
 
 # The floor each evaluator pays before it evaluates anything.
-basegon=$(best "$gon" eval 1)
+basenyax=$(best "$nyax" eval 1)
 basenix=$(best "$nix" --eval -E 1)
 
 if [ $# -eq 0 ]; then
@@ -96,5 +96,5 @@ else
   done
 fi
 
-printf '\nbest of %d runs, wall time in ms including startup, which is %sms for\n' "$repeats" "$basegon"
-printf 'gon and %sms for nix. The ratio has both subtracted.\n' "$basenix"
+printf '\nbest of %d runs, wall time in ms including startup, which is %sms for\n' "$repeats" "$basenyax"
+printf 'Nyax and %sms for nix. The ratio has both subtracted.\n' "$basenix"

@@ -1,5 +1,5 @@
 // Package daemon is a client for the Nix daemon's worker protocol — the
-// interface nix itself talks to nix-daemon. gon uses it to add source paths
+// interface nix itself talks to nix-daemon. Nyax uses it to add source paths
 // and build derivations through the system's store instead of writing to the
 // store itself, which keeps store paths and build behaviour identical to Nix.
 package daemon
@@ -21,7 +21,7 @@ const (
 
 	// protocolVersion is the highest worker protocol we speak. Nix negotiates
 	// the minimum of this and the daemon's, so claiming a version below 1.38
-	// avoids the feature-set exchange, which gon does not need.
+	// avoids the feature-set exchange, which Nyax does not need.
 	protocolVersion = 1<<8 | 37
 
 	stderrNext          = 0x6f6c6d67

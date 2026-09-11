@@ -3,7 +3,7 @@ package eval
 import (
 	"slices"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // What is true of a node without evaluating it is worked out once, here,

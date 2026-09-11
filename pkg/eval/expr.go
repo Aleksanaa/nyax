@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"unsafe"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // blameKind labels why an expression is being evaluated, so that a backtrace

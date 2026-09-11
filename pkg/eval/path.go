@@ -3,7 +3,7 @@ package eval
 import (
 	"strings"
 
-	"github.com/aleksanaa/go-nix/pkg/source"
+	"github.com/aleksanaa/nyax/pkg/source"
 )
 
 // NixPath is a filesystem path value. Path is the resolved, absolute, cleaned

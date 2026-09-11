@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aleksanaa/go-nix/pkg/nixhash"
-	p "github.com/aleksanaa/go-nix/pkg/parser"
-	"github.com/aleksanaa/go-nix/pkg/source"
+	"github.com/aleksanaa/nyax/pkg/nixhash"
+	p "github.com/aleksanaa/nyax/pkg/parser"
+	"github.com/aleksanaa/nyax/pkg/source"
 )
 
 // The remaining builtins nixpkgs leans on that are not big enough for a file

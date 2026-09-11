@@ -1,7 +1,7 @@
 package eval
 
 import (
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // An Env is one frame of the chain a name is read through: the values one

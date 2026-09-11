@@ -1,7 +1,7 @@
-# Towers of Hanoi, written to evaluate identically under `nix` and under `gon`.
+# Towers of Hanoi, written to evaluate identically under `nix` and under `nyax`.
 #
 #   nix-instantiate --eval examples/hanoi.nix
-#   gon eval -f examples/hanoi.nix
+#   nyax eval -f examples/hanoi.nix
 #
 # Exercises list building and set construction: solving n disks builds a list
 # of 2^n - 1 moves, so the cost doubles with every disk.

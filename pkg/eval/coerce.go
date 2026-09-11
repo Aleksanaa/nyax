@@ -5,7 +5,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/aleksanaa/go-nix/pkg/nixhash"
+	"github.com/aleksanaa/nyax/pkg/nixhash"
 )
 
 // CoerceToString converts a value to a string the way interpolation and

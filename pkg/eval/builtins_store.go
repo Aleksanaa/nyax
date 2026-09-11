@@ -10,8 +10,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/aleksanaa/go-nix/pkg/nixhash"
-	"github.com/aleksanaa/go-nix/pkg/source"
+	"github.com/aleksanaa/nyax/pkg/nixhash"
+	"github.com/aleksanaa/nyax/pkg/source"
 )
 
 // The store builtins: the small primitives a derivation needs to name its

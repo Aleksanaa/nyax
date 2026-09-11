@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/aleksanaa/go-nix/pkg/nixhash"
+	"github.com/aleksanaa/nyax/pkg/nixhash"
 )
 
 // The store paths below were produced by Nix for the same expressions, so the

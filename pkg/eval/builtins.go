@@ -1,7 +1,7 @@
 package eval
 
 import (
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // A builtin is a primitive operation exposed through the `builtins` set.

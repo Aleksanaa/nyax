@@ -1,5 +1,5 @@
 {
-  description = "Nix language parser and Nix-compatible file hasher in Go";
+  description = "Nyax — Nix language parser and Nix-compatible file hasher in Go";
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -10,8 +10,8 @@
     systems = [ "x86_64-linux" "aarch64-linux" ];
     perSystem = { pkgs, ... }: {
       packages = rec {
-        go-nix = with pkgs; buildGoModule {
-          name = "go-nix";
+        nyax = with pkgs; buildGoModule {
+          name = "nyax";
 
           src = lib.cleanSource ./.;
 
@@ -32,7 +32,7 @@
 
           meta.license = lib.licenses.lgpl21Plus;
         };
-        default = go-nix;
+        default = nyax;
       };
       devShells.default = with pkgs; mkShell {
         packages = [

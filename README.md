@@ -1,4 +1,4 @@
-# go-nix
+# Nyax
 
 ## Intro
 
@@ -47,7 +47,7 @@ What we have implemented (Expect bugs)
 - [x] Hash parity with official Nix across nixpkgs — `hello`, `stdenv`,
       `neovim`, `emacs`, `ffmpeg`, `llvm`, the GNOME graphical ISO, and others
       all produce the same derivation paths
-- [x] CLI: `gon eval`, `gon parse`, `gon hash`, `gon derivation`, `gon repl`
+- [x] CLI: `nyax eval`, `nyax parse`, `nyax hash`, `nyax derivation`, `nyax repl`
 - [ ] Parallel evaluation
 
 ## Acknowledgement
@@ -77,5 +77,5 @@ What we have implemented (Expect bugs)
 
 ## License
 
-go-nix is licensed under the GNU Lesser General Public License, version 2.1 or
+Nyax is licensed under the GNU Lesser General Public License, version 2.1 or
 later. See [LICENSE](LICENSE) and [NOTICE](NOTICE).

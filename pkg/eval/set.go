@@ -6,7 +6,7 @@ import (
 	"strings"
 	"unsafe"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // AttrSet is an attribute set: the names it binds, each with the expression

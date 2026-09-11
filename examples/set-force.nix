@@ -6,7 +6,7 @@
 # work, not already-evaluated constants.
 #
 #   nix-instantiate --eval examples/set-force.nix
-#   gon eval -f examples/set-force.nix
+#   nyax eval -f examples/set-force.nix
 #
 # `n` is on its own line so that examples/bench.sh can rewrite it.
 let

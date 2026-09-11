@@ -1,5 +1,5 @@
-go-nix
-Copyright (C) 2026 aleksana and the go-nix contributors
+Nyax
+Copyright (C) 2026 aleksana and the Nyax contributors
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free
@@ -17,7 +17,7 @@ with this program. If not, see <https://www.gnu.org/licenses/>.
 
 Derived from Orivej Desh's go-nix
 (https://github.com/orivej/go-nix), which is released into the public domain
-under the UNLICENSE. The packages pkg/parser, pkg/nixhash, pkg/util and cmd/gon
+under the UNLICENSE. The packages pkg/parser, pkg/nixhash, pkg/util and cmd/nyax
 are based on that work; its original UNLICENSE is kept in the UNLICENSE file.
 
 To keep behaviour identical to the reference implementation, this project was

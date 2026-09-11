@@ -11,9 +11,9 @@ The Go benchmarks in `pkg/eval/bench_test.go` run the same workloads in
 process, but their CPU profiles lie: `b.Loop` collects between rounds, and
 with `-benchmem` so does `ReadMemStats`, so the profile fills with `gcDrain`
 however GOGC is set. The profiles below come from the binary itself
-(`gon --profile cpu`, run under `GOGC=off`), which is what bench.sh times.
+(`nyax --profile cpu`, run under `GOGC=off`), which is what bench.sh times.
 
-Baseline (bench.sh sizes, gon vs nix, startup subtracted): gon ran 1.5–2.1x
+Baseline (bench.sh sizes, Nyax vs nix, startup subtracted): Nyax ran 1.5–2.1x
 slower than nix on every workload.
 
 ## What the profiles said
@@ -99,7 +99,7 @@ workloads: what is left of the gap to nix is now substantially the collector.
 ## Not done / next
 
 - The GC itself. A batch evaluator can trade memory for the collector's share
-  (a higher GOGC or a GOMEMLIMIT ballast in cmd/gon, respecting the user's
+  (a higher GOGC or a GOMEMLIMIT ballast in cmd/nyax, respecting the user's
   own settings); rejected for now as a runtime-policy change rather than an
   evaluator improvement.
 - `strings` still allocates ~6 objects per fold step: two NixStrings, two

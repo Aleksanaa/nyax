@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"math"
 
-	"github.com/aleksanaa/go-nix/pkg/nixjson"
+	"github.com/aleksanaa/nyax/pkg/nixjson"
 )
 
 // ValueFromNative converts a value decoded from JSON into a Nix value.

@@ -1,7 +1,7 @@
 package eval
 
 import (
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // Working out where every name comes from, before anything is evaluated.

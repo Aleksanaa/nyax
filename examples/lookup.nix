@@ -2,7 +2,7 @@
 # two more through a `with`, which both evaluators have to search dynamically.
 #
 # Nix resolves lexical names to a position at parse time and indexes straight
-# into the environment; gon walks a chain of scopes. This is the workload that
+# into the environment; Nyax walks a chain of scopes. This is the workload that
 # tells the two apart.
 #
 # `n` is on its own line so that examples/bench.sh can rewrite it.

@@ -4,7 +4,7 @@
 // HTML-escapes by default, turning ">" into "\u003e", and it lays floats out
 // differently. This package wraps it with Nix's choices, which are
 // nlohmann::json's: Nix serialises with that library, so matching it is what
-// makes gon's JSON byte-for-byte the same.
+// makes Nyax's JSON byte-for-byte the same.
 package nixjson
 
 import (

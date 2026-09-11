@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/aleksanaa/go-nix/pkg/nixhash"
+	"github.com/aleksanaa/nyax/pkg/nixhash"
 )
 
 // TestPathCoercion covers which coercions copy a path literal into the store.

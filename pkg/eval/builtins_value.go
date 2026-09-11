@@ -8,7 +8,7 @@ import (
 	"strings"
 	"unsafe"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // arithOp is the builtin for add, sub, mul and div: an arithmetic operator

@@ -3,7 +3,7 @@ package eval
 import (
 	"testing"
 
-	p "github.com/aleksanaa/go-nix/pkg/parser"
+	p "github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // TestStringLiteralsArePreInterned pins that a string literal's symbol is

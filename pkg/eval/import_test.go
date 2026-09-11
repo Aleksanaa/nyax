@@ -5,8 +5,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/aleksanaa/go-nix/pkg/nixhash"
-	"github.com/aleksanaa/go-nix/pkg/parser"
+	"github.com/aleksanaa/nyax/pkg/nixhash"
+	"github.com/aleksanaa/nyax/pkg/parser"
 )
 
 // evalFile parses and evaluates a file, printing the result deeply.
